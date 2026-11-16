@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Profile</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="game-title"><i class="fa-solid fa-gamepad"></i> CREATE YOUR PROFILE</h1>
+        <p class="subtitle">&gt; INSERT YOUR DATA TO BEGIN &lt;</p>
+
+        <form action="ProfileServlet" method="POST" class="pixel-box">
+            <div class="form-grid">
+
+                <div class="field">
+                    <label for="name"><i class="fa-solid fa-user"></i>CHARACTER NAME</label>
+                    <input type="text" id="name" name="name" placeholder="e.g. Amir" required>
+                </div>
+
+                <div class="field">
+                    <label for="studentId"><i class="fa-solid fa-id-card"></i>PLAYER ID</label>
+                    <input type="text" id="studentId" name="studentId" placeholder="Student ID" required>
+                </div>
+
+                <div class="field">
+                    <label for="program"><i class="fa-solid fa-shield-halved"></i>CLASS</label>
+                    <select id="program" name="program" required>
+                        <option value="">-- Choose Class --</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                        <option value="Data Science">Data Science</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="email"><i class="fa-solid fa-envelope"></i>CONTACT</label>
+                    <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                </div>
+
+                <div class="field full">
+                    <span class="field-label"><i class="fa-solid fa-star"></i>SKILLS (HOBBIES)</span>
+                    <div class="skills-grid">
+                        <label class="skill-option">
+                            <input type="checkbox" name="hobbies" value="Gaming">
+                            <span><i class="fa-solid fa-gamepad"></i> Gaming</span>
+                        </label>
+                        <label class="skill-option">
+                            <input type="checkbox" name="hobbies" value="Coding">
+                            <span><i class="fa-solid fa-code"></i> Coding</span>
+                        </label>
+                        <label class="skill-option">
+                            <input type="checkbox" name="hobbies" value="Reading">
+                            <span><i class="fa-solid fa-book"></i> Reading</span>
+                        </label>
+                        <label class="skill-option">
+                            <input type="checkbox" name="hobbies" value="Sports">
+                            <span><i class="fa-solid fa-futbol"></i> Sports</span>
+                        </label>
+                        <label class="skill-option">
+                            <input type="checkbox" name="hobbies" value="Music">
+                            <span><i class="fa-solid fa-music"></i> Music</span>
+                        </label>
+                        <label class="skill-option">
+                            <input type="checkbox" name="hobbies" value="Drawing">
+                            <span><i class="fa-solid fa-palette"></i> Drawing</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field full">
+                    <label for="intro"><i class="fa-solid fa-scroll"></i>BACKSTORY</label>
+                    <textarea id="intro" name="intro" rows="5" placeholder="Tell us about yourself..." required></textarea>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="btn btn-start"><i class="fa-solid fa-play"></i> START GAME</button>
+                <button type="reset" class="btn btn-reset"><i class="fa-solid fa-rotate-left"></i> RESET</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
